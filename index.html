@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saluto</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="cards">
+    <section class="card" aria-labelledby="greeting-title">
+      <div class="card__icon" aria-hidden="true">✦</div>
+      <p class="eyebrow">UN SALUTO AL VOLO</p>
+      <h1 id="greeting-title">Ciao, piacere!</h1>
+      <p class="intro">Presentati: ti darò il benvenuto con un saluto speciale.</p>
+      <form id="greeting-form">
+        <label for="name">Il tuo nome</label>
+        <input id="name" name="name" type="text" placeholder="Ad esempio, Sofia" autocomplete="given-name" required>
+        <button type="submit">Salutami <span aria-hidden="true">→</span></button>
+      </form>
+      <p id="greeting" class="greeting" aria-live="polite"></p>
+    </section>
+
+    <section class="card clock-card" aria-labelledby="clock-title">
+      <div class="card__icon clock-card__icon" aria-hidden="true">◷</div>
+      <p class="eyebrow">ORA LOCALE</p>
+      <h2 id="clock-title">Che ore sono?</h2>
+      <time id="clock-time" class="clock-time">--:--:--</time>
+      <p id="clock-date" class="clock-date"></p>
+    </section>
+
+    <section class="card weather-card" aria-labelledby="weather-title">
+      <div class="weather-card__search">
+        <div class="card__icon weather-card__icon" aria-hidden="true">☀</div>
+        <p class="eyebrow">METEO</p>
+        <h2 id="weather-title">Che tempo fa?</h2>
+        <form id="weather-form">
+          <label for="city">La tua città</label>
+          <input id="city" name="city" type="text" placeholder="Ad esempio, Roma" autocomplete="address-level2" required>
+          <button type="submit">Cerca meteo <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+      <div class="weather-card__result" aria-live="polite">
+        <p id="weather-status" class="weather-status">Inserisci una città per vedere il meteo attuale.</p>
+        <div id="weather-result" class="weather-result" hidden>
+          <p id="weather-place" class="weather-place"></p>
+          <div class="weather-main">
+            <span id="weather-icon" class="weather-icon" aria-hidden="true"></span>
+            <span id="weather-temp" class="weather-temp"></span>
+          </div>
+          <p id="weather-desc" class="weather-desc"></p>
+          <dl class="weather-details">
+            <div><dt>Percepita</dt><dd id="weather-feels"></dd></div>
+            <div><dt>Umidità</dt><dd id="weather-humidity"></dd></div>
+            <div><dt>Vento</dt><dd id="weather-wind"></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
